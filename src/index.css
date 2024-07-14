@@ -1,11 +1,13 @@
 :root {
   --clr-primary-300: hsla(225, 100%, 60%, 1);
   --clr-primary-400: hsla(225, 100%, 42%, 1);
+  --clr-primary-700: hsla(225, 60%, 20%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-200: hsla(0, 0%, 90%, 1);
 
   --fs-400: 1rem;
+  --fs-600: 1.5rem;
   --fs-700: 2.5rem;
 
   --fw-reqular: 400;
@@ -13,7 +15,7 @@
 
   --spacing-200: 0.5rem;
   --spacing-400: 1rem;
-  --spacing-700: 2rem;
+  --spacing-700: 2.5rem;
 }
 
 /* reset and stuffs here */

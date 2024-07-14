@@ -2,18 +2,7 @@
   height: 100%;
 }
 
-::selection {
-  background-color: var(--clr-primary-300);
-  color: var(--clr-neutral-100);
-}
-
-header {
-  padding: 2em;
-  position: relative;
-  isolation: isolate;
-}
-
-header::before {
+#root::before {
   content: "";
   background-image: linear-gradient(
     45deg,
@@ -25,5 +14,10 @@ header::before {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -99;
+}
+
+header {
+  margin-top: var(--spacing-700);
+  padding: 0 1em;
 }

@@ -1,0 +1,7 @@
+.todos {
+  display: grid;
+  grid-row-gap: var(--spacing-400);
+  width: min(90%, 40em);
+  margin: 0 auto;
+  margin-top: var(--spacing-700);
+}

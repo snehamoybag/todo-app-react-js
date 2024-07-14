@@ -1,5 +1,6 @@
 import Logo from "./components/Logo";
 import TodoForm from "./components/TodoForm";
+import TodosContainer from "./components/TodosContainer";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       </header>
       <main>
         <TodoForm />
+        <TodosContainer />
       </main>
     </>
   );
