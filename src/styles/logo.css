@@ -1,0 +1,6 @@
+.logo__text {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  color: var(--clr-neutral-100);
+}

@@ -1,0 +1,62 @@
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-200);
+  padding: 0 1em;
+  color: var(--clr-neutral-100);
+  margin: 0 auto;
+}
+
+.todo-form__input {
+  color: inherit;
+  padding: 0.75em 0.5em;
+  border: 2px solid var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  opacity: 0.75;
+  transition: transform 200ms ease;
+}
+
+.todo-form__input:hover,
+.todo-form__input:focus {
+  opacity: 1;
+}
+
+.todo-form__input:focus {
+  outline-color: var(--clr-neutral-100);
+  transform: scale(105%);
+  box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.todo-form__input::placeholder {
+  color: var(--clr-neutral-100);
+  opacity: 0.85;
+}
+
+.todo-form__btn-submit {
+  align-self: stretch;
+  width: 4.5em;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.1);
+  opacity: 0.9;
+}
+
+.todo-form__btn-submit:hover,
+.todo-form__btn-submit:focus-visible {
+  opacity: 1;
+}
+
+.todo-form__btn-submit:focus-visible {
+  outline-color: var(--clr-primary-400);
+}
+
+.todo-form__btn-submit:active {
+  transform: scale(97%);
+  box-shadow: none;
+}
