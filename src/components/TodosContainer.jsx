@@ -7,7 +7,7 @@ const TodosContainer = ({ tasks }) => {
     <div className="todos">
       <Todo id={1} task={"Todo 1"} />
       <Todo id={2} task={"Todo 2"} />
-      <Todo id={3} task={"Todo 1"} />
+      <Todo id={3} task={"Todo 3"} />
     </div>
   );
 };
