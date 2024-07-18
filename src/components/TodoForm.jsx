@@ -1,9 +1,12 @@
 import "../styles/todo-form.css";
 import "../styles/sr-only.css";
+import { useState } from "react";
 
-const TodoForm = () => {
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+const TodoForm = ({ handleFormSubmit }) => {
+  const [taskInputValue, setTaskInputValue] = useState("");
+
+  const handleTaskInputChange = (event) => {
+    setTaskInputValue(event.target.value);
   };
 
   return (
@@ -12,7 +15,10 @@ const TodoForm = () => {
       action="/"
       method="POST"
       id="todo-form"
-      onSubmit={handleFormSubmit}
+      onSubmit={(event) => {
+        handleFormSubmit(event, taskInputValue);
+        setTaskInputValue(""); // clear input field
+      }}
     >
       <p className="todo-form__field-wrapper">
         <label htmlFor="todo-task">
@@ -25,6 +31,8 @@ const TodoForm = () => {
             placeholder="Do some grocery shopping..."
             maxLength={90}
             required
+            value={taskInputValue}
+            onChange={handleTaskInputChange}
           />
         </label>
       </p>

@@ -2,12 +2,20 @@ import PlaceholderTodo from "./PlaceholderTodo";
 import Todo from "./Todo";
 import "../styles/todos.css";
 
-const TodosContainer = ({ tasks }) => {
+const TodosContainer = ({ todos = [], handleTodoComplete }) => {
+  const todoEls = todos.map((todo) => {
+    return (
+      <Todo
+        key={todo.id}
+        todoData={todo}
+        handleTodoComplete={handleTodoComplete}
+      />
+    );
+  });
+
   return (
     <div className="todos">
-      <Todo id={1} task={"Todo 1"} />
-      <Todo id={2} task={"Todo 2"} />
-      <Todo id={3} task={"Todo 3"} />
+      {todos.length < 1 ? <PlaceholderTodo /> : todoEls}
     </div>
   );
 };
