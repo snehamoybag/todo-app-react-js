@@ -1,8 +1,10 @@
 import "../styles/todo.css";
 import "../styles/sr-only.css";
+import { useRef } from "react";
 
 const Todo = ({ todoData, handleTodoComplete }) => {
   const { task, id } = todoData;
+  const checkBoxId = `todo-check-${id}`;
 
   return (
     <div className="todo" id={id}>
@@ -12,8 +14,8 @@ const Todo = ({ todoData, handleTodoComplete }) => {
           <input
             className="todo__checkbox-input"
             type="checkbox"
-            id={id}
-            name={id}
+            id={checkBoxId}
+            name={checkBoxId}
             onChange={() => handleTodoComplete(id)}
           />
         </label>

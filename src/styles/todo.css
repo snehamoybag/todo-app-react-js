@@ -36,7 +36,7 @@
 }
 
 .todo__checkbox-input {
-  --size: 65%;
+  --size: 100%;
 
   /* reset check box default styling */
   -moz-appearance: none;

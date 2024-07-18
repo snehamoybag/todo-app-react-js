@@ -2,7 +2,8 @@ import Logo from "./components/Logo";
 import TodoForm from "./components/TodoForm";
 import TodosContainer from "./components/TodosContainer";
 import "./App.css";
-import { useState } from "react";
+import todos from "./scripts/todos";
+import { useEffect, useState } from "react";
 
 const createTodoData = (task) => ({
   id: Date.now(),
@@ -10,7 +11,12 @@ const createTodoData = (task) => ({
 });
 
 function App() {
-  const [todosData, setTodosData] = useState([]);
+  const [todosData, setTodosData] = useState(todos.getData() || []);
+
+  // sync data with localStorage
+  useEffect(() => {
+    todos.setData(todosData);
+  }, [todosData]);
 
   const handleTodoFormSubmit = (event, taskInputValue) => {
     event.preventDefault();
